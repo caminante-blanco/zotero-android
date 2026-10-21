@@ -1648,10 +1648,7 @@ class ItemDetailsViewModel @Inject constructor(
                     filename = filename,
                 )
                 when (contentType) {
-                    "application/pdf" -> {
-                        showPdf(file = file, parentKey = parentKey, attachment = attachment)
-                    }
-                    "text/html", "application/epub+zip" -> {
+                    "application/pdf", "text/html", "application/epub+zip" -> {
                         Timber.i("ItemDetailsViewModel: show HTML / EPUB ${attachment.key}")
                         showReader(
                             file = file,
